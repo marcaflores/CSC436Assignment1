@@ -1,0 +1,25 @@
+{
+  "name": "csc436assignment1",
+  "version": "1.0.0",
+  "description": "Static Foundations",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcaflores/CSC436Assignment1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/marcaflores/CSC436Assignment1/issues"
+  },
+  "homepage": "https://github.com/marcaflores/CSC436Assignment1#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
