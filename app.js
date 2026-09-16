@@ -49,4 +49,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     update();
   });
+
+  var revealTargets = document.querySelectorAll(".reveal");
+
+  if ("IntersectionObserver" in window && revealTargets.length) {
+    var revealObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    revealTargets.forEach(function (target) {
+      revealObserver.observe(target);
+    });
+  } else {
+    revealTargets.forEach(function (target) {
+      target.classList.add("is-visible");
+    });
+  }
 });
