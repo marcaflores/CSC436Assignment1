@@ -1,6 +1,34 @@
 console.log("Static Foundations loaded");
 
+// Runs immediately (this script has no "defer"), before <body> paints,
+// so a saved light-mode preference applies with no dark-then-light flash.
+// Dark mode is the default: no attribute is set unless "light" was saved.
+if (localStorage.getItem("theme") === "light") {
+  document.documentElement.setAttribute("data-theme", "light");
+}
+
 document.addEventListener("DOMContentLoaded", function () {
+  var themeToggle = document.getElementById("theme-toggle");
+
+  if (themeToggle) {
+    var isLight = document.documentElement.getAttribute("data-theme") === "light";
+    themeToggle.setAttribute("aria-pressed", String(isLight));
+
+    themeToggle.addEventListener("click", function () {
+      isLight = document.documentElement.getAttribute("data-theme") === "light";
+
+      if (isLight) {
+        document.documentElement.removeAttribute("data-theme");
+        localStorage.setItem("theme", "dark");
+      } else {
+        document.documentElement.setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
+      }
+
+      themeToggle.setAttribute("aria-pressed", String(!isLight));
+    });
+  }
+
   document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
     var track = carousel.querySelector(".carousel-track");
     var slides = Array.from(track.children);
