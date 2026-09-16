@@ -5,7 +5,7 @@
 
 > **How this review was made.** Your instructor reviewed this project with [Claude](https://claude.com) (Anthropic's AI) as a second set of eyes. Claude cloned the repo, read all four pages, the stylesheet and both scripts, loaded the site at phone, tablet and desktop widths, ran the W3C validator on every page, clicked the theme toggle and confirmed it persisted, advanced the project carousel, submitted the contact form, read the console, and read the development log you submitted. Every note and every point below was read and approved by your instructor. Same standard, same rubric, just more time spent looking at *your* code than one human has in a grading week.
 
-## Grade: 84 / 100
+## Grade: 86 / 100
 
 | Category | Points | Earned | One line |
 |---|:-:|:-:|---|
@@ -13,15 +13,15 @@
 | CSS layout | 25 | 23 | 909 lines of real CSS: tokens, fluid type, Flexbox and Grid both earning their keep, two themes; desktop-first |
 | Responsive design | 15 | 13 | No horizontal scroll on any page; the nav wraps onto two lines at 375px |
 | JavaScript interaction | 15 | 12 | Theme toggle, carousel and scroll-reveal all vanilla and all verified; the contact form goes nowhere |
-| Repository and deployment | 15 | 10 | README complete, 19 descriptive commits; 260 unrelated Claude skill files committed, all in one 13-hour window |
+| Repository and deployment | 15 | 12 | README complete, 19 descriptive commits, AI skill files kept as evidence; all in one 13-hour window |
 | Content and polish | 10 | 8 | Real portfolio, real projects, optimized images; a form that says "Send" and doesn't |
-| **Total** | **100** | **84** | **The most complete site in the class. The repo and the form need the same care as the CSS.** |
+| **Total** | **100** | **86** | **The most complete site in the class. The form and the nav need the same care as the CSS.** |
 
 ## The short version
 
 This is a finished portfolio. Four pages, all valid, one `h1` each, a skip link, `aria-current` on the active nav item, a real headshot, a real résumé PDF, three real projects with nine optimized screenshots, and a stylesheet with a token system, fluid type, both layout models, and a light theme that respects reduced motion. The JavaScript is vanilla, which is what the brief asked for, and all three interactions work. Your development log documents every step, which is exactly what the AI policy wants.
 
-The deductions are about the edges. The repo has 282 files and 22 of them are the site; the other 260 are Claude Code skill files that have nothing to do with the project. The contact form has no handler and no destination, so clicking Send reloads the page with the visitor's message in the address bar and nothing else happens, while the README calls it "a working form." The nav is placed *after* a 100vh hero, so on first paint nobody can see it. And all 19 commits are inside one 13-hour stretch on the due date, with the last seven timestamped after midnight.
+The deductions are about the edges. The contact form has no handler and no destination, so clicking Send reloads the page with the visitor's message in the address bar and nothing else happens, while the README calls it "a working form." The nav is placed *after* a 100vh hero, so on first paint nobody can see it. And all 19 commits are inside one 13-hour stretch on the due date, with the last seven timestamped after midnight.
 
 One more thing, and it's not a deduction. Your log shows the AI redesigned the site three times, diagnosed a Chrome repaint bug, found a Grid `order` quirk, re-encoded an image, and audited the rubric. The brief allows all of that. The rule that comes with it is that you can explain every line. The review names five spots. Be ready for them.
 
@@ -42,7 +42,7 @@ Things Claude measured (so you know these aren't guesses):
 | Console | 1 stray `console.log` per page, 0 errors |
 | `styles.css` | 909 lines, 37 custom properties, 14 flex rules, 5 grid rules, 7 media queries, 10 `clamp()`, 0 `!important` |
 | Images | 11 files, 1.44 MB total including the résumé PDF; largest 255 KB |
-| Files in repo | 282; 260 are under `.claude/skills/` |
+| Files in repo | 282; 260 are under `.claude/skills/`, kept as a record of the AI tooling used (your instructor asked for that) |
 | Commits | 19, from Sep 15 12:41 PM to Sep 16 1:27 AM; 7 are after the 11:59 PM deadline |
 | README | Title, description, run locally, live URL: all four |
 
@@ -142,7 +142,7 @@ Things Claude measured (so you know these aren't guesses):
 - **`console.log("Static Foundations loaded")`** on [L1](https://github.com/marcaflores/CSC436Assignment1/blob/04196c2/app.js#L1) fires on every page. Fine while building; remove before shipping.
 - **On the development log.** Entries 3, 6, 10, 11 and 17 describe the AI choosing the design direction, diagnosing a repaint bug, re-encoding an image, finding a Grid `order` quirk, and building the theme system. Be ready to explain these five in office hours: why the root font size is a `clamp()` in `rem` and not `px` ([styles.css L63](https://github.com/marcaflores/CSC436Assignment1/blob/04196c2/styles.css#L63)); what `threshold: 0.15` means on [app.js L98](https://github.com/marcaflores/CSC436Assignment1/blob/04196c2/app.js#L98) and why the observer unobserves; what `(i + slides.length) % slides.length` does on [L71](https://github.com/marcaflores/CSC436Assignment1/blob/04196c2/app.js#L71) when `i` is `-1`; why CSS `order` on a Grid child swapped which column track it landed in (log entry 11); and why the theme script runs before `<body>` and what "no attribute means dark" buys you.
 
-## Repository and deployment — 10 / 15
+## Repository and deployment — 12 / 15
 
 **What's working**
 
@@ -150,7 +150,7 @@ Things Claude measured (so you know these aren't guesses):
 
 **What to change**
 
-- **260 of the 282 files in the repo aren't the site.** The first commit added `.claude/skills/` with brand guidelines, slide templates, a design-system skill and their scripts: 260 files, none of which the site loads. They're tooling for your editor, not the project. Delete the folder and add `.claude/` to `.gitignore`, the way `node_modules/` already is.
+- **The `.claude/skills/` folder stays.** 260 of the 282 files in the repo are Claude Code skill files. Normally that's editor tooling that doesn't belong in a project repo, but your instructor wants it kept as a record of what the AI was given to work with. No points off. Just know that on a job it would go in `.gitignore` next to `node_modules/`.
 - **One 13-hour window.** All 19 commits are between 12:41 PM on September 15 and 1:27 AM on September 16. The messages are good; the timeline is the night before. The brief asked for history that shows the project developing over time, and two weeks were available.
 - **Seven commits are timestamped after the 11:59 PM deadline,** including the theme toggle and the README. This review doesn't deduct for that. What it means is your instructor's call.
 - **The README says the contact form works.** It doesn't. Say what's true.
@@ -175,7 +175,7 @@ Things Claude measured (so you know these aren't guesses):
 flowchart TB
     subgraph p1["Fix first: these cost the most points"]
         direction TB
-        a1["Remove the 260 .claude/skills files<br/>from the repo. 22 of 282 files<br/>are the actual site"]
+        a1["Start earlier: all 19 commits are in<br/>one 13-hour window, and 7 of them<br/>are timestamped after the deadline"]
         a2["Make the contact form do something,<br/>or stop calling it working in the README"]
         a3["Move the nav above the hero<br/>so it is visible at first paint"]
     end
@@ -183,11 +183,11 @@ flowchart TB
         direction TB
         b1["Wrap the nav links in a ul"]
         b2["Flip the media queries to mobile-first"]
-        b3["Start earlier: all 19 commits are in<br/>one 13-hour window, and 7 of them<br/>are timestamped after the deadline"]
+        b3["Delete data.js (it is an empty array)<br/>and the console.log on app.js line 1"]
     end
     subgraph p3["Polish: small, but people notice"]
         direction TB
-        c1["Delete data.js (it is an empty array)<br/>and the console.log on app.js line 1"]
+        c1["Drop the unused Bootstrap CSS and JS<br/>tags: 200 KB per page for nothing"]
         c2["Give the Experience entry<br/>two or three bullets"]
         c3["Fix the nav wrap at 375px:<br/>Resume drops to a second line"]
         c4["Be ready to explain the five<br/>code spots named in the review"]
@@ -198,7 +198,7 @@ flowchart TB
     style p3 fill:#f2fbf1,stroke:#2e7d32
 ```
 
-1. **Clean the repo.** Delete `.claude/`, add it to `.gitignore`, delete `data.js`. Ten minutes, and the repo goes from 282 files to 21.
+1. **Start Project 2 the day it's assigned.** Nineteen good commits in thirteen hours is still one night. Spread the same work over two weeks and the history tells a better story.
 2. **Wire the form.** Netlify Forms is two attributes. Or write the handler and get a validation interaction out of it.
 3. **Put the nav where people can see it,** and while you're in the header, make the links a list.
 
