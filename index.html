@@ -26,8 +26,29 @@
 <header>
   <!--Hero-->
   <div class="hero">
-    <h1>Marc Flores Mendoza</h1>
-    <p>Web Developer</p>
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Web Developer</p>
+        <h1>Marc Flores Mendoza</h1>
+        <p class="hero-tagline">Welcome to my portfolio — take a look around.</p>
+        <div class="hero-actions">
+          <a class="card-link hero-cta" href="projects.html">View My Projects<svg class="icon-external" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+          <div class="social-links">
+            <a class="social-link" href="https://www.linkedin.com/in/marcfloresmendoza/" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+              <svg class="icon-external" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+            <a class="social-link" href="https://github.com/marcaflores" target="_blank" rel="noopener noreferrer">
+              GitHub
+              <svg class="icon-external" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img class="headshot-large" src="projectAssets/MarcHeadshot.jpg" alt="Portrait of Marc Flores Mendoza" width="360" height="450">
+      </div>
+    </div>
   </div>
   <!--navbar-->
   <nav class="navbar">
@@ -41,20 +62,14 @@
 </header>
 
 <main id="main-content">
-  <section class="panel intro">
-    <p>Welcome to my portfolio — take a look around.</p>
-    <div class="social-links">
-      <a class="social-link" href="https://www.linkedin.com/in/marcfloresmendoza/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a class="social-link" href="https://github.com/marcaflores" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </div>
-  </section>
-
   <section class="panel">
+    <span class="panel-eyebrow">01 / Who I Am</span>
     <h2>About Me</h2>
-    <p>21 year old computer science student, web developer, and aspiring software engineer.</p>
+    <p>Hey, I’m Marc!<br>Thanks for stopping by my portfolio. I’m a 21-year-old developer from New York City currently pursuing my Bachelor’s degree in Computer Science at CUNY. I enjoy building things, solving problems, and exploring how technology can be used to turn ideas into something real.<br>I’m especially interested in software development, web development, and working with data. From building web applications and working with APIs and databases to experimenting with Linux and learning new programming languages, I’m always looking for something new to learn and improve on.<br>Outside of coding, I’m passionate about cars, soccer, fashion, and technology. I’m constantly curious about new ideas and technologies, and I’m always looking for opportunities to grow my skills, take on new challenges, and build projects that I can be proud of.</p>
   </section>
 
   <section class="panel">
+    <span class="panel-eyebrow">02 / Background</span>
     <h2>Education</h2>
     <p>City University of New York, College of Staten Island<br>
       Bachelor of Science in Computer Science — Expected Spring 2027<br>
@@ -63,9 +78,33 @@
   </section>
 
   <section class="panel">
+    <span class="panel-eyebrow">03 / Toolbox</span>
     <h2>Skills</h2>
-    <p><strong>Languages:</strong> Python, C++, C, JavaScript, TypeScript, SQL, HTML/CSS, Bash</p>
-    <p><strong>Frameworks/Tools:</strong> React, Next.js, Node.js, Flask, Git, GitHub, Linux, PostgreSQL, MySQL, Supabase, Vite</p>
+    <h3 class="chip-group-label">Languages</h3>
+    <div class="chip-list">
+      <span class="chip">Python</span>
+      <span class="chip">C++</span>
+      <span class="chip">C</span>
+      <span class="chip">JavaScript</span>
+      <span class="chip">TypeScript</span>
+      <span class="chip">SQL</span>
+      <span class="chip">HTML/CSS</span>
+      <span class="chip">Bash</span>
+    </div>
+    <h3 class="chip-group-label">Frameworks &amp; Tools</h3>
+    <div class="chip-list">
+      <span class="chip">React</span>
+      <span class="chip">Next.js</span>
+      <span class="chip">Node.js</span>
+      <span class="chip">Flask</span>
+      <span class="chip">Git</span>
+      <span class="chip">GitHub</span>
+      <span class="chip">Linux</span>
+      <span class="chip">PostgreSQL</span>
+      <span class="chip">MySQL</span>
+      <span class="chip">Supabase</span>
+      <span class="chip">Vite</span>
+    </div>
   </section>
 </main>
 
