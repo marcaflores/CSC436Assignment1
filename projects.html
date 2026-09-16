@@ -18,6 +18,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Preload carousel images so switching slides doesn't wait on a fresh download -->
+  <link rel="preload" as="image" href="projectAssets/PokeFinalHome.png">
+  <link rel="preload" as="image" href="projectAssets/PokeFinalBuilder.png">
+  <link rel="preload" as="image" href="projectAssets/PokeFinalTypes.png">
+  <link rel="preload" as="image" href="projectAssets/PokeFinalAbilities.png">
+  <link rel="preload" as="image" href="projectAssets/PokeFinalRegions.webp">
+  <link rel="preload" as="image" href="projectAssets/paycoreGraphic.webp">
+  <link rel="preload" as="image" href="projectAssets/paycoreManagerDash.webp">
+  <link rel="preload" as="image" href="projectAssets/paycoreEmployeedash.webp">
+  <link rel="preload" as="image" href="projectAssets/delilahIntro.png">
 </head>
 <body>
 
@@ -43,9 +54,9 @@
 </header>
 
 <main id="main-content">
-  <section>
-    <div class="project-grid reveal">
-      <article class="project-card">
+  <section class="project-band reveal">
+    <div class="container project-band-grid">
+      <div class="project-media">
         <div class="carousel" data-carousel>
           <div class="carousel-viewport">
           <div class="carousel-track">
@@ -53,24 +64,42 @@
             <img class="carousel-slide" src="projectAssets/PokeFinalBuilder.png" alt="Pokemon Encyclopedia team builder">
             <img class="carousel-slide" src="projectAssets/PokeFinalTypes.png" alt="Pokemon Encyclopedia types page">
             <img class="carousel-slide" src="projectAssets/PokeFinalAbilities.png" alt="Pokemon Encyclopedia abilities page">
-            <img class="carousel-slide" src="projectAssets/PokeFinalRegions.png" alt="Pokemon Encyclopedia regions page">
+            <img class="carousel-slide" src="projectAssets/PokeFinalRegions.webp" alt="Pokemon Encyclopedia regions page">
           </div>
           <button type="button" class="carousel-btn carousel-prev" aria-label="Previous image">&#8249;</button>
           <button type="button" class="carousel-btn carousel-next" aria-label="Next image">&#8250;</button>
           </div>
           <div class="carousel-dots"></div>
         </div>
-        <div class="project-card-body">
-          <h2>Pokemon Encyclopedia</h2>
-          <p><strong>Languages Used:</strong> HTML, JavaScript, CSS</p>
-          <p><strong>Frameworks/Tools:</strong> Bootstrap, jQuery</p>
-          <p><strong>Technologies Learned:</strong> API Integration, JSON</p>
-          <p class="project-description">Add a short description of this project here.</p>
-          <a class="card-link" href="https://github.com/marcaflores/marcaflores.github.io/tree/main/PokeFinal" target="_blank" rel="noopener noreferrer">View project<svg class="icon-external" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </div>
+      <div class="project-info">
+        <span class="panel-eyebrow">01 / Web App</span>
+        <h2>Pokemon Encyclopedia</h2>
+        <h3 class="chip-group-label">Languages Used</h3>
+        <div class="chip-list">
+          <span class="chip">HTML</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">CSS</span>
         </div>
-      </article>
+        <h3 class="chip-group-label">Frameworks/Tools</h3>
+        <div class="chip-list">
+          <span class="chip">Bootstrap</span>
+          <span class="chip">jQuery</span>
+        </div>
+        <h3 class="chip-group-label">Technologies Learned</h3>
+        <div class="chip-list">
+          <span class="chip">API Integration</span>
+          <span class="chip">JSON</span>
+        </div>
+        <p class="project-description">An interactive Pokédex-style web app for browsing Pokémon, types, and abilities, plus a team builder for assembling and comparing squads. Pulls live data from a Pokémon API and renders it into a searchable, multi-page interface.</p>
+        <a class="card-link" href="https://github.com/marcaflores/marcaflores.github.io/tree/main/PokeFinal" target="_blank" rel="noopener noreferrer">View project<svg class="icon-external" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </div>
+    </div>
+  </section>
 
-      <article class="project-card">
+  <section class="project-band reveal">
+    <div class="container project-band-grid">
+      <div class="project-media">
         <div class="carousel" data-carousel>
           <div class="carousel-viewport">
           <div class="carousel-track">
@@ -83,17 +112,36 @@
           </div>
           <div class="carousel-dots"></div>
         </div>
-        <div class="project-card-body">
-          <h2>PayCore</h2>
-          <p><strong>Languages Used:</strong> Python, JavaScript</p>
-          <p><strong>Frameworks/Tools:</strong> Django, React, Supabase, Shad.cn</p>
-          <p><strong>Technologies Learned:</strong> RESTful APIs, Database Design</p>
-          <p class="project-description">Add a short description of this project here.</p>
-          <a class="card-link" href="https://paycorehq.vercel.app" target="_blank" rel="noopener noreferrer">View project<svg class="icon-external" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </div>
+      <div class="project-info">
+        <span class="panel-eyebrow">02 / Full-Stack Platform</span>
+        <h2>PayCore</h2>
+        <h3 class="chip-group-label">Languages Used</h3>
+        <div class="chip-list">
+          <span class="chip">Python</span>
+          <span class="chip">JavaScript</span>
         </div>
-      </article>
+        <h3 class="chip-group-label">Frameworks/Tools</h3>
+        <div class="chip-list">
+          <span class="chip">Django</span>
+          <span class="chip">React</span>
+          <span class="chip">Supabase</span>
+          <span class="chip">Shad.cn</span>
+        </div>
+        <h3 class="chip-group-label">Technologies Learned</h3>
+        <div class="chip-list">
+          <span class="chip">RESTful APIs</span>
+          <span class="chip">Database Design</span>
+        </div>
+        <p class="project-description">A full-stack payroll/HR platform with separate manager and employee dashboards — managers handle approvals and oversight while employees track their own hours and pay. Built with a Django REST backend and a React frontend backed by Supabase.</p>
+        <a class="card-link" href="https://paycorehq.vercel.app" target="_blank" rel="noopener noreferrer">View project<svg class="icon-external" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </div>
+    </div>
+  </section>
 
-      <article class="project-card">
+  <section class="project-band reveal">
+    <div class="container project-band-grid">
+      <div class="project-media">
         <div class="carousel" data-carousel>
           <div class="carousel-viewport">
           <div class="carousel-track">
@@ -104,14 +152,21 @@
           </div>
           <div class="carousel-dots"></div>
         </div>
-        <div class="project-card-body">
-          <h2>Delilah</h2>
-          <p><strong>Languages Used:</strong> Python</p>
-          <p><strong>Technologies Learned:</strong> AI Chatbot Development</p>
-          <p class="project-description">Add a short description of this project here.</p>
-          <a class="card-link" href="https://github.com/allenz2423/financebot" target="_blank" rel="noopener noreferrer">View project<svg class="icon-external" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </div>
+      <div class="project-info">
+        <span class="panel-eyebrow">03 / AI Project</span>
+        <h2>Delilah</h2>
+        <h3 class="chip-group-label">Languages Used</h3>
+        <div class="chip-list">
+          <span class="chip">Python</span>
         </div>
-      </article>
+        <h3 class="chip-group-label">Technologies Learned</h3>
+        <div class="chip-list">
+          <span class="chip">AI Chatbot Development</span>
+        </div>
+        <p class="project-description">An AI-powered finance chatbot that answers personal finance questions and helps users reason through budgeting decisions in a conversational chat interface. Built in Python to explore AI chatbot development end-to-end.</p>
+        <a class="card-link" href="https://github.com/allenz2423/financebot" target="_blank" rel="noopener noreferrer">View project<svg class="icon-external" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </div>
     </div>
   </section>
 </main>
