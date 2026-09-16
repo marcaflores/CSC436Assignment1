@@ -14,17 +14,20 @@
 
   <title>Projects - Marc Flores Mendoza</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <header>
-    <!--Jumbotron-->
-  <div class="jumbotron jumbotron-fluid py-4 mb-3">
-    <div class="container text-center">
-      <h1 class="display-4">Projects</h1>
-      <p class="lead">A few things I've built.</p>
-    </div>
+  <!--Hero-->
+  <div class="hero">
+    <h1>Projects</h1>
+    <p>A few things I've built.</p>
   </div>
   <!--navbar-->
   <nav class="navbar">
@@ -37,7 +40,7 @@
   </nav>
 </header>
 
-<main>
+<main id="main-content">
   <section>
     <div class="project-grid">
       <article class="project-card">
@@ -45,7 +48,7 @@
         <p><strong>Languages Used:</strong> HTML, JavaScript, CSS</p>
         <p><strong>Frameworks/Tools:</strong> Bootstrap, jQuery</p>
         <p><strong>Technologies Learned:</strong> API Integration, JSON</p>
-        <a href="https://github.com/marcaflores/marcaflores.github.io/tree/main/PokeFinal">Pokemon Encyclopedia</a>
+        <a class="card-link" href="https://github.com/marcaflores/marcaflores.github.io/tree/main/PokeFinal" target="_blank" rel="noopener noreferrer">View project</a>
       </article>
 
       <article class="project-card">
@@ -53,14 +56,14 @@
         <p><strong>Languages Used:</strong> Python, JavaScript</p>
         <p><strong>Frameworks/Tools:</strong> Django, React, Supabase, Shad.cn</p>
         <p><strong>Technologies Learned:</strong> RESTful APIs, Database Design</p>
-        <a href="https://github.com/SamuelIVX/paycore">PayCore GitHub</a>
+        <a class="card-link" href="https://paycore.vercel.app" target="_blank" rel="noopener noreferrer">View project</a>
       </article>
 
       <article class="project-card">
         <h2>Delilah</h2>
         <p><strong>Languages Used:</strong> Python</p>
         <p><strong>Technologies Learned:</strong> AI Chatbot Development</p>
-        <a href="https://github.com/allenz2423/financebot">Delilah FinanceBot</a>
+        <a class="card-link" href="https://github.com/allenz2423/financebot" target="_blank" rel="noopener noreferrer">View project</a>
       </article>
     </div>
   </section>

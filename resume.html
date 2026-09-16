@@ -14,17 +14,20 @@
 
   <title>Resume - Marc Flores Mendoza</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <header>
-  <!--Jumbotron-->
-  <div class="jumbotron jumbotron-fluid py-4 mb-3">
-    <div class="container text-center">
-      <h1 class="display-4">Resume</h1>
-      <p class="lead">My experience, at a glance.</p>
-    </div>
+  <!--Hero-->
+  <div class="hero">
+    <h1>Resume</h1>
+    <p>My experience, at a glance.</p>
   </div>
   <!--navbar-->
   <nav class="navbar">
@@ -37,10 +40,10 @@
   </nav>
 </header>
 
-<main>
-  <section class="container">
+<main id="main-content">
+  <section class="panel">
     <iframe class="resume-viewer" src="MarcFloresMendozaResume2027.pdf" title="Marc Flores Mendoza's resume"></iframe>
-    <p><a href="MarcFloresMendozaResume2027.pdf" download>Download resume (PDF)</a></p>
+    <p class="text-center"><a class="card-link" href="MarcFloresMendozaResume2027.pdf" download>Download resume (PDF)</a></p>
   </section>
 </main>
 
