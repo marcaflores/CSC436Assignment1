@@ -398,7 +398,8 @@ textarea:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .tech-icons {
+  .tech-icons,
+  .social-links {
     justify-content: center;
   }
 
@@ -678,7 +679,8 @@ main {
     min-height: auto;
   }
 
-  .project-band-grid {
+  .project-band-grid,
+  .project-band:nth-of-type(2n) .project-band-grid {
     grid-template-columns: 1fr;
   }
 
